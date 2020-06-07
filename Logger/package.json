@@ -1,8 +1,8 @@
 {
-  "name": "logger",
-  "version": "1.0.0",
+  "name": "godatalogger",
+  "version": "1.0.1",
   "description": "Modulo de log para todo el equipo de trabajo",
-  "main": "index.js",
+  "main": "godataLogger.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,8 +11,6 @@
   "dependencies": {
     "chalk": "^4.0.0",
     "dateformat": "^3.0.3",
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1",
     "winston": "^3.2.1"
   },
   "devDependencies": {}
