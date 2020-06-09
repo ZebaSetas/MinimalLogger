@@ -1,5 +1,4 @@
 'use strict';
-
 const path = require('path');
 const {
   createLogger,
@@ -9,6 +8,7 @@ const {
 const chalk = require('chalk');
 var dateFormat = require('dateformat');
 const fileUtils = require('./utils/fileUtils.js');
+var appRoot = require('app-root-path')
 
 const extractLogPath = (optionalLogPath) => {
   try {
