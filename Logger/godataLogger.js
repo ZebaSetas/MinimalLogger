@@ -10,19 +10,19 @@ const chalk = require('chalk');
 var dateFormat = require('dateformat');
 const fileUtils = require('./utils/fileUtils.js');
 
-const extractLogPath = (globalFilenamePath, optionalLogPath) => {
+const extractLogPath = (optionalLogPath) => {
   try {
     fileUtils.createFile(optionalLogPath)
     return optionalLogPath
-  } catch (e) {
-    return fileUtils.getFolderPath(globalFilenamePath) + '/Log/'
+  } catch {
+    return appRoot.path + '/Log/'
   }
 }
 
 module.exports = class Logger {
   constructor(globalFilename, optionalLogPath) {
     var filenamePath = fileUtils.getFolderAndFilename(globalFilename)
-    var logPath = extractLogPath(globalFilename, optionalLogPath)
+    var logPath = extractLogPath(optionalLogPath)
     var nameServerLog = 'server.log'
     var nameExceptionLog = 'exception.log'
     var filename = path.join(logPath, nameServerLog)
